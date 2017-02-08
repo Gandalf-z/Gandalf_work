@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>简易日历</title>
+	<script type="text/javascript" language="javascript">
+		window.onload=function(){
+		var content=document.getElementById("content");
+		var month=document.getElementsByTagName("li");
+		var play=document.getElementById("play");
+		var arr=[
+		'宜 纳采 订盟 祭祀 求嗣 出火',
+		'祭祀 斋醮 沐浴 开生坟 除服 ',
+		'祭祀 沐浴 理发 作灶 结网',
+		'入宅 安葬 伐木 作梁 纳畜',
+		'祭祀 祈福 求嗣 纳畜 入殓',
+		'祭祀 斋醮 沐浴 开生坟 除服 ',
+		'祭祀 沐浴 理发 作灶 结网',
+		'入宅 安葬 伐木 作梁 纳畜',
+		'祭祀 祈福 求嗣 纳畜 入殓',	
+		'祭祀 斋醮 沐浴 开生坟 除服 ',
+		'祭祀 沐浴 理发 作灶 结网',
+		'入宅 安葬 伐木 作梁 纳畜'];
+			for(i=0;i<month.length;i++){
+				month[i].index=i+1;
+				month[i].onmouseover=function(){
+					for(var i=0;i<month.length;i++){
+						month[i].className="";
+					}
+					this.className+='active';
+					play.innerHTML='<h2>'+this.index+'月活动</h2><p>'+arr[this.index]+'</p>';
+				};
+			}
+			
+		};
+	</script>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		#content{
+			margin:30px auto;
+			width:300px;
+			height:500px;
+			background-color: #ccc;
+		}
+		#allMonth{
+			height:400px;
+			width:300px;
+			list-style: none;
+		}
+		#allMonth li{
+			height:80px;
+			width:75px;
+			margin: 8px 11px;
+			background-color:#FBFDFB;
+			border:1px solid black;
+			float:left;			
+		}
+		#play{
+			height:100px;
+			width:300px;
+			background-color: #E8E9E6;
+		}
+		.active{
+			background-color:#EB5932;
+			color:orange;
+		}
+	</style>
+</head>
+<body>
+	<div id="content">
+		<ul id="allMonth">
+			<li class="month id="yuefen">
+				<h3 align="center">1</h3>
+				<p align="center">Jan</p>
+			</li>
+			<li class="month" id="yuefen">
+				<h3 align="center">2</h3>
+				<p align="center">FER</p>
+			</li>
+			<li class="month" id="yuefen">
+				<h3 align="center">3</h3>
+				<p align="center">MAR</p>
+			</li>
+			<li class="month" id="yuefen">
+				<h3 align="center">4</h3>
+				<p align="center">APR</p> 
+			</li>
+			<li class="month" id="yuefen">
+				<h3 align="center">5</h3>
+				<p align="center">MAY</p>
+			</li>
+			<li class="month" id="yuefen">
+				<h3 align="center">6</h3>
+				<p align="center">JUN</p>
+			</li>
+			<li class="month" id="yuefen">
+				<h3 align="center">7</h3>
+				<p align="center">JUL</p>
+			</li>
+			<li class="month" id="yuefen">
+				<h3 align="center">8</h3>
+				<p align="center">AUG</p>
+			</li>
+			<li class="month" id="yuefen">
+				<h3 align="center">9</h3>
+				<p align="center">SEP</p>
+			</li>
+			<li class="month" id="yuefen">
+				<h3 align="center">10</h3>
+				<p align="center">OCT</p>
+			</li>
+			<li class="month" id="yuefen">
+				<h3 align="center">11</h3>
+				<p align="center">NOV</p>
+			</li>
+			<li class="month" id="yuefen">
+				<h3 align="center">12</h3>
+				<p align="center">DEC</p>
+			</li>
+		</ul>
+		<div id="play">
+			<h2>1月活动</h2>
+			<p>快过年了,大家可以商量着去哪玩吧~</p>
+		</div>
+	</div>
+
+</body>
+</html>
